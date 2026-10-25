@@ -1,14 +1,102 @@
-\documentclass{article}
-\usepackage{graphicx} % Required for inserting images
+\documentclass[11pt]{article}
 
-\title{#CV}
-\author{apotfalean }
-\date{October 2026}
+% Harvard-style CV
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, left=0.42in, right=0.42in, top=48.4pt, bottom=0.5in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt}
+
+% Section heading: bold, centred
+\newcommand{\cvsection}[1]{%
+  \vspace{24.85pt}%
+  \centerline{\textbf{#1}}%
+  \vspace{12pt}%
+}
+
+% Entry: bold title / location on the first line, subtitle / dates on the second
+\newcommand{\cventry}[4]{%
+  \textbf{#1} \hfill #2 \\
+  #3 \hfill #4\par
+}
+\newcommand{\cvrole}[4]{%
+  \textbf{#1} \hfill #2 \\
+  \textbf{#3} \hfill #4\par
+}
+\newcommand{\cvgap}{\vspace{1.1em}}
 
 \begin{document}
 
-\maketitle
+% ---------------- Header ----------------
+\begin{center}
+  {\LARGE\textbf{Andrei Potfalean}}
+\end{center}
+\vspace{0.8pt}
+\hrule
+\vspace{18pt}
+\centerline{Aan Het Verlaat 33 $\bullet$ Delft, Netherlands 2612 XW $\bullet$
+  \href{mailto:A.Potfalean-1@student.tudelft.nl}{A.Potfalean-1@student.tudelft.nl} $\bullet$ +40 735 406 301}
 
-\section{Introduction}
+% ---------------- Education ----------------
+\cvsection{Education}
+
+\cventry{ETH Zurich}{Zurich, Switzerland}
+  {Master of Science in Computational Science and Engineering}{Confirmed start date: September 2026}
+\cvgap
+
+\cventry{Delft University of Technology}{Delft, Netherlands}
+  {Bachelor of Science in Aerospace Engineering}{September 2023 - June 2026}
+\cvgap
+
+\cventry{Nanyang Technological University (NTU)}{Singapore}
+  {Exchange semester focused on fluid dynamics}{August 2025 - December 2025}
+\cvgap
+
+\cventry{Emil Racovita National College}{Cluj-Napoca, Romania}
+  {Mathematics and Computer Science - Intensive C++ Computer Science (High school)}{September 2019 - July 2023}
+
+% ---------------- Experience ----------------
+\cvsection{Experience}
+
+\cvrole{AeroDelft}{Delft, Netherlands}{Structures engineer}{August 2024 - July 2025}
+\begin{itemize}
+  \item Contributed to qualifying the airframe for a Permit to Fly
+  \item Performed a static test and an experimental modal analysis on the motor mount
+  \item Virtually prototyped the motor mount using Simcenter 3D, Simcenter Testlab and CATIA V6
+  \item Documented the systems engineering aspect for interdepartmental integration
+\end{itemize}
+\cvgap
+
+\cvrole{Airfoil cavity simulation}{Singapore, NTU}{Junior researcher}{September 2025 - February 2026}
+\begin{itemize}
+  \item Working in a 3-person team project using a single cavity in the airfoil to delay the onset of flow separation.
+  \item Adjusting the cavity dimensions using ML-enhanced methods to have the least influence on the initial L/D curve
+\end{itemize}
+
+% ---------------- Volunteering ----------------
+\cvsection{Volunteering}
+
+\cvrole{Interact Cetatuie}{Cluj-Napoca, Romania}{Board member, Treasurer}{September 2020 - July 2022}
+\begin{itemize}
+  \item Managed the financial resources of the club
+  \item Founding member of this local Rotary International youth club
+\end{itemize}
+\cvgap
+
+\cvrole{World Organization of the Scout Movement}{Cluj-Napoca, Romania}{Scout Member}{September 2019 - ongoing}
+\begin{itemize}
+  \item Actively participated in global scouting initiatives, fostering leadership, teamwork and community service skills.
+\end{itemize}
+
+% ---------------- Skills ----------------
+\vspace{-12.5pt}
+\cvsection{Skills}
+
+\textbf{Technical:} C++, Python, MATLAB \\
+\textbf{Software/Tools:} Simcenter 3D, Simcenter Testlab, ANSYS Fluent, ANSYS Mechanical, CATIA V6, SolidWorks \\
+\textbf{Language:} Romanian (mother tongue), English C2
 
 \end{document}
