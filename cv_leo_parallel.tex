@@ -1,0 +1,108 @@
+\documentclass[11pt]{article}
+
+% Harvard-style CV
+\usepackage[T1]{fontenc}
+\usepackage[letterpaper, left=0.42in, right=0.42in, top=0.5in, bottom=0.45in]{geometry}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlist[itemize]{topsep=0pt, itemsep=0pt, parsep=0pt, partopsep=0pt}
+
+% Section heading: bold, centred
+\newcommand{\cvsection}[1]{%
+  \vspace{16pt}%
+  \centerline{\textbf{#1}}%
+  \vspace{8pt}%
+}
+
+% Entry: bold title / location on the first line, subtitle / dates on the second
+\newcommand{\cventry}[4]{%
+  \textbf{#1} \hfill #2 \\
+  #3 \hfill #4\par
+}
+\newcommand{\cvrole}[4]{%
+  \textbf{#1} \hfill #2 \\
+  \textbf{#3} \hfill #4\par
+}
+\newcommand{\cvgap}{\vspace{0.7em}}
+
+\begin{document}
+
+% ---------------- Header ----------------
+\begin{center}
+  {\LARGE\textbf{Andrei Potfalean}}
+\end{center}
+\vspace{0.8pt}
+\hrule
+\vspace{18pt}
+\centerline{Ueberlandstrasse 17 $\bullet$ Dietikon, Switzerland 8953 $\bullet$
+  \href{mailto:apotfalean@student.ethz.ch}{apotfalean@student.ethz.ch} $\bullet$ +41 77 259 55 76}
+
+% ---------------- Education ----------------
+\cvsection{Education}
+
+\cventry{ETH Zurich}{Zurich, Switzerland}
+  {Master of Science in Computational Science and Engineering}{September 2026 - Ongoing}
+Relevant coursework: Nonlinear Dynamics, Probabilistic Artificial Intelligence (incl. reinforcement learning)
+\cvgap
+
+\cventry{Delft University of Technology}{Delft, Netherlands}
+  {Bachelor of Science in Aerospace Engineering}{September 2023 - June 2026}
+Relevant coursework: Dynamics, Orbital Mechanics, Python Programming, \textit{Simulation, Verification and Validation}
+\begin{itemize}
+  \item Programmed the flight dynamics computer of an aircraft, applying robotics theory
+\end{itemize}
+\cvgap
+
+\cventry{Nanyang Technological University (NTU)}{Singapore}
+  {Exchange semester focused on fluid dynamics}{August 2025 - December 2025}
+Relevant coursework: Aeroelasticity (MATLAB)
+\cvgap
+
+\cventry{Emil Racovita National College}{Cluj-Napoca, Romania}
+  {Mathematics and Computer Science - Intensive C++ Computer Science (High school)}{September 2019 - July 2023}
+
+% ---------------- Experience ----------------
+\cvsection{Experience}
+
+\cvrole{AeroDelft}{Delft, Netherlands}{Structures engineer (24 hours/week)}{August 2024 - July 2025}
+\begin{itemize}
+  \item Contributed to qualifying the airframe for a Permit to Fly
+  \item Performed a static test and an experimental modal analysis on the motor mount (roving hammer method, SCADA unit), identifying its vibration modes to check for propeller-induced resonance
+  \item Virtually prototyped the motor mount using Simcenter 3D, Simcenter Testlab and CATIA V6
+  \item Documented the systems engineering aspect for interdepartmental integration
+\end{itemize}
+\cvgap
+
+\cvrole{Airfoil cavity simulation}{Singapore}{Junior researcher}{September 2025 - February 2026}
+\begin{itemize}
+  \item Worked in a 3-person team project using a single cavity in the airfoil to delay the onset of flow separation.
+  \item Adjusted the cavity dimensions using ML-enhanced methods to have the least influence on the initial L/D curve
+\end{itemize}
+
+% ---------------- Volunteering ----------------
+\cvsection{Volunteering}
+
+\cvrole{Interact Cetatuie}{Cluj-Napoca, Romania}{Board member, Treasurer}{September 2020 - July 2022}
+\begin{itemize}
+  \item Managed the financial resources of the club
+  \item Founding member of this local Rotary International youth club
+\end{itemize}
+\cvgap
+
+\cvrole{World Organization of the Scout Movement}{Cluj-Napoca, Romania}{Scout Member}{September 2019 - ongoing}
+\begin{itemize}
+  \item Actively participated in global scouting initiatives, fostering leadership, teamwork and community service skills.
+\end{itemize}
+
+% ---------------- Skills ----------------
+\vspace{-8pt}
+\cvsection{Skills}
+
+\textbf{Programming:} Python, C++, MATLAB, Linux \\
+\textbf{Software/Tools:} Simcenter 3D, Simcenter Testlab, ANSYS Fluent, ANSYS Mechanical, CATIA V6, SolidWorks \\
+\textbf{Language:} Romanian (mother tongue), English C2
+
+\end{document}
